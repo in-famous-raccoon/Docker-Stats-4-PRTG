@@ -23,6 +23,6 @@ for container in $CONTAINERS
   mem=$(/usr/bin/docker stats --no-stream --format "{{ .MemPerc }}" $container | tr -d '%')
   output="$output { \"channel\": \"$container Memory Usage\", \"value\": \"$mem\", \"float\": 1, \"unit\": \"percent\", \"limitmode\": 1, \"limitmaxwarning\": \"70\", \"limitmaxerror\": \"90\" },"
   done
-  output="$output { \"channel\": \"FileAge\", \"value\": \"$fileage\" } ], \"text\": \"LastRun $(date '+%d.%m.%Y %T')\" } }"
+  output="$output { \"channel\": \"FileAge\", \"value\": \"$fileage\", \"unit\": \"timeseconds\" } ], \"text\": \"LastRun $(date '+%d.%m.%Y %T')\" } }"
 
 echo $output | jq '.' > $OUTPUT_FILE
