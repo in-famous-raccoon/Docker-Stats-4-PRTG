@@ -45,6 +45,8 @@ docker run -d \
 * Name = Docker Stats
 * URL = http://YOURNGINXSERVER/DockerStats4PRTG.json
 
+[![image.png](https://i.postimg.cc/fLsCV7x5/image.png)](https://postimg.cc/SXZC5M1z)
+
 ##### Useful links
 [PRTG custom sensors](https://www.paessler.com/manuals/prtg/custom_sensors)<br/>
 [PRTG HTTP Data Advanced](https://kb.paessler.com/en/topic/66368-http-data-advanced-json-response-formatting)<br/>
